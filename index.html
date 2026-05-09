@@ -1,16 +1,9 @@
-<!-- ============================================================
-NEXORA SHOP — FINAL OFFICIAL PREMIUM VERSION
-APPLE / LINEAR / STRIPE STYLE
-FULL HTML COMPLETE
-============================================================ -->
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
 
 <meta charset="UTF-8" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Nexora Shop — Recursos Digitales Premium</title>
@@ -24,27 +17,20 @@ content="ebooks, recursos digitales, IA, productividad, diseño, emprendedores" 
 <meta name="author" content="Nexora Studio" />
 
 <meta property="og:title" content="Nexora Shop" />
-
 <meta property="og:description"
 content="Recursos digitales premium para potenciar tu mundo digital." />
-
 <meta property="og:type" content="website" />
 
 <link rel="icon"
 href="https://i.postimg.cc/prwfX6Rh/eabdfe39-8d0c-474f-b03e-d105dcf436d5.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
 rel="stylesheet">
 
 <style>
-
-/* ============================================================
-RESET
-============================================================ */
 
 *{
   margin:0;
@@ -57,53 +43,31 @@ html{
 }
 
 body{
-
   background:#070707;
-
   color:#fff;
-
   font-family:'Inter',sans-serif;
-
   overflow-x:hidden;
-
   position:relative;
 }
 
-/* ============================================================
-ROOT COLORS
-============================================================ */
-
 :root{
-
   --gold:#FFD95A;
   --gold-light:#FFF2A8;
   --gold-dark:#C79818;
-
   --bg:#070707;
   --card:#121212;
-
   --white:#ffffff;
   --soft:#cfcfcf;
 }
 
-/* ============================================================
-BACKGROUND
-============================================================ */
-
 body::before{
-
   content:'';
-
   position:fixed;
-
   inset:0;
 
   background:
-
     radial-gradient(circle at 20% 20%, rgba(255,217,90,.14), transparent 22%),
-
     radial-gradient(circle at 80% 70%, rgba(255,217,90,.08), transparent 26%),
-
     linear-gradient(
       180deg,
       #20170d 0%,
@@ -114,39 +78,24 @@ body::before{
   z-index:-2;
 }
 
-/* ============================================================
-PARTICLES
-============================================================ */
-
 .particles{
-
   position:fixed;
-
   inset:0;
-
   overflow:hidden;
-
   pointer-events:none;
-
   z-index:-1;
 }
 
 .particle{
-
   position:absolute;
-
   width:3px;
   height:3px;
-
   border-radius:50%;
-
   background:rgba(255,217,90,.4);
-
   animation:float linear infinite;
 }
 
 @keyframes float{
-
   from{
     transform:translateY(100vh);
     opacity:0;
@@ -162,37 +111,22 @@ PARTICLES
   }
 }
 
-/* ============================================================
-LOADER
-============================================================ */
-
 .loader{
-
   position:fixed;
-
   inset:0;
-
   background:#070707;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   z-index:999999;
-
   animation:fadeLoader 1s ease forwards;
-
   animation-delay:2.5s;
 }
 
 .loader-logo{
-
   font-family:'Space Grotesk',sans-serif;
-
   font-size:40px;
-
   letter-spacing:.28em;
-
   animation:pulse 1.5s infinite;
 }
 
@@ -201,7 +135,6 @@ LOADER
 }
 
 @keyframes pulse{
-
   0%{
     opacity:.4;
     transform:scale(.96);
@@ -219,55 +152,35 @@ LOADER
 }
 
 @keyframes fadeLoader{
-
   to{
     opacity:0;
     visibility:hidden;
   }
 }
 
-/* ============================================================
-NAVBAR
-============================================================ */
-
 .nav{
-
   position:fixed;
-
   top:0;
-
   width:100%;
-
   z-index:999;
-
   backdrop-filter:blur(18px);
-
   background:rgba(10,10,10,.55);
-
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .nav-inner{
-
   max-width:1300px;
-
   margin:auto;
-
   padding:18px 28px;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 
 .logo{
-
   font-family:'Space Grotesk',sans-serif;
-
   font-size:20px;
-
   font-weight:700;
-
   letter-spacing:.18em;
 }
 
@@ -276,20 +189,14 @@ NAVBAR
 }
 
 .nav-links{
-
   display:flex;
-
   gap:34px;
 }
 
 .nav-links a{
-
   color:#f0f0f0;
-
   text-decoration:none;
-
   font-size:14px;
-
   transition:.3s;
 }
 
@@ -298,11 +205,8 @@ NAVBAR
 }
 
 .menu-btn{
-
   display:none;
-
   font-size:28px;
-
   cursor:pointer;
 }
 
@@ -317,77 +221,47 @@ NAVBAR
   }
 }
 
-/* ============================================================
-HERO
-============================================================ */
-
 .hero{
-
   min-height:100vh;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   text-align:center;
-
   padding:180px 24px 120px;
-
   position:relative;
 }
 
 .hero-content{
-
   max-width:1100px;
 }
 
 .eyebrow{
-
   display:inline-flex;
-
   align-items:center;
-
   gap:10px;
-
   padding:12px 20px;
-
   border-radius:999px;
-
   background:rgba(255,255,255,.04);
-
   border:1px solid rgba(255,255,255,.08);
-
   margin-bottom:34px;
-
   font-size:12px;
-
   letter-spacing:.18em;
-
   text-transform:uppercase;
 }
 
 .dot{
-
   width:8px;
   height:8px;
-
   border-radius:50%;
-
   background:var(--gold);
-
   box-shadow:0 0 20px var(--gold);
 }
 
 .hero h1{
-
   font-family:'Space Grotesk',sans-serif;
-
   font-size:clamp(68px,12vw,170px);
-
   line-height:.92;
-
   letter-spacing:-.06em;
-
   margin-bottom:30px;
 
   background:linear-gradient(
@@ -397,12 +271,10 @@ HERO
   );
 
   -webkit-background-clip:text;
-
   color:transparent;
 }
 
 .hero h1 span{
-
   background:linear-gradient(
     135deg,
     #FFF2A8,
@@ -411,59 +283,36 @@ HERO
   );
 
   -webkit-background-clip:text;
-
   color:transparent;
 }
 
 .sub{
-
   max-width:760px;
-
   margin:auto auto 48px;
-
   font-size:clamp(18px,2vw,24px);
-
   line-height:1.8;
-
   color:#d9d9d9;
-
   font-weight:300;
 }
 
 .hero-buttons{
-
   display:flex;
-
   justify-content:center;
-
   gap:20px;
-
   flex-wrap:wrap;
 }
 
-/* ============================================================
-BUTTONS
-============================================================ */
-
 .btn{
-
   padding:16px 34px;
-
   border-radius:999px;
-
   border:none;
-
   cursor:pointer;
-
   font-weight:600;
-
   font-size:15px;
-
   transition:.4s;
 }
 
 .btn-primary{
-
   background:linear-gradient(
     135deg,
     #FFF2A8,
@@ -478,108 +327,72 @@ BUTTONS
 }
 
 .btn-primary:hover{
-
   transform:
     translateY(-5px)
     scale(1.03);
 }
 
 .btn-secondary{
-
   background:rgba(255,255,255,.06);
-
   border:1px solid rgba(255,255,255,.08);
-
   color:#fff;
 }
 
 .btn-secondary:hover{
-
   border-color:rgba(255,217,90,.4);
 }
 
-/* ============================================================
-SECTION
-============================================================ */
-
 section{
-
   max-width:1300px;
-
   margin:auto;
-
   padding:140px 28px;
 }
 
 .section-title{
-
   text-align:center;
-
   margin-bottom:80px;
 }
 
 .section-title h2{
-
   font-size:clamp(46px,6vw,76px);
-
   line-height:1.05;
-
   letter-spacing:-0.04em;
-
   margin-bottom:22px;
 }
 
 #products .section-title h2{
-
-  font-size:clamp(68px,8vw,118px);
-
-  line-height:1.02;
-
+  font-size:clamp(68px,8vw,110px);
+  line-height:1.04;
   letter-spacing:-0.05em;
-
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
 .section-title p{
-
   color:#cfcfcf;
-
   max-width:700px;
-
   margin:auto;
-
   line-height:1.8;
 }
 
-/* ============================================================
-PRODUCTS
-============================================================ */
-
 .products{
-
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:30px;
 }
 
 @media(max-width:1000px){
-
   .products{
     grid-template-columns:1fr 1fr;
   }
 }
 
 @media(max-width:700px){
-
   .products{
     grid-template-columns:1fr;
   }
 }
 
 .card{
-
   background:linear-gradient(
     180deg,
     rgba(255,255,255,.06),
@@ -587,11 +400,8 @@ PRODUCTS
   );
 
   border:1px solid rgba(255,255,255,.08);
-
   border-radius:34px;
-
   overflow:hidden;
-
   transition:.5s;
 
   box-shadow:
@@ -601,7 +411,6 @@ PRODUCTS
 }
 
 .card:hover{
-
   transform:
     translateY(-12px)
     scale(1.02);
@@ -614,106 +423,72 @@ PRODUCTS
 }
 
 .card img{
-
   width:100%;
-
   height:270px;
-
   object-fit:cover;
 }
 
 .card-content{
-
   padding:28px;
 }
 
 .card h3{
-
   font-size:26px;
-
   margin-bottom:14px;
 }
 
 .card p{
-
   color:#d7d7d7;
-
   line-height:1.8;
-
   margin-bottom:26px;
 }
 
 .price-row{
-
   display:flex;
-
   align-items:center;
   justify-content:space-between;
 }
 
 .price{
-
   font-size:32px;
-
   color:var(--gold);
-
   font-weight:700;
 }
 
-/* ============================================================
-TESTIMONIALS
-============================================================ */
-
 .testimonials{
-
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:28px;
 }
 
 @media(max-width:900px){
-
   .testimonials{
     grid-template-columns:1fr;
   }
 }
 
 .testimonial{
-
   padding:34px;
-
   border-radius:30px;
-
   background:rgba(255,255,255,.04);
-
   border:1px solid rgba(255,255,255,.06);
 }
 
 .testimonial p{
-
   color:#ddd;
-
   line-height:1.9;
-
   margin-bottom:24px;
 }
 
 .user{
-
   display:flex;
-
   align-items:center;
-
   gap:14px;
 }
 
 .avatar{
-
   width:50px;
   height:50px;
-
   border-radius:50%;
 
   background:linear-gradient(
@@ -723,46 +498,30 @@ TESTIMONIALS
   );
 }
 
-/* ============================================================
-ABOUT
-============================================================ */
-
 .about{
-
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   gap:80px;
-
   align-items:center;
 }
 
 @media(max-width:900px){
-
   .about{
     grid-template-columns:1fr;
   }
 }
 
 .about p{
-
   color:#ececec;
-
   margin-bottom:18px;
-
   line-height:1.8;
 }
 
 .about h2{
-
-  font-size:clamp(50px,6vw,78px);
-
+  font-size:clamp(48px,6vw,78px);
   line-height:1.18;
-
   letter-spacing:-0.04em;
-
-  margin-bottom:30px;
+  margin-bottom:28px;
 
   background:linear-gradient(
     180deg,
@@ -771,14 +530,11 @@ ABOUT
   );
 
   -webkit-background-clip:text;
-
   color:transparent;
 }
 
 .visual{
-
   aspect-ratio:1/1;
-
   border-radius:36px;
 
   background:
@@ -791,16 +547,12 @@ ABOUT
     0 30px 90px rgba(0,0,0,.34);
 
   position:relative;
-
   overflow:hidden;
 }
 
 .visual::after{
-
   content:'';
-
   position:absolute;
-
   inset:0;
 
   background:
@@ -812,46 +564,28 @@ ABOUT
 }
 
 .stats{
-
   display:flex;
-
   gap:40px;
-
   flex-wrap:wrap;
-
   margin-top:36px;
 }
 
 .num{
-
   color:var(--gold);
-
   font-size:34px;
-
   font-weight:700;
 }
 
 .lbl{
-
   color:#bfbfbf;
-
   font-size:12px;
-
   text-transform:uppercase;
-
   letter-spacing:.12em;
 }
 
-/* ============================================================
-CTA
-============================================================ */
-
 .cta{
-
   text-align:center;
-
   padding:120px 28px;
-
   border-radius:42px;
 
   background:linear-gradient(
@@ -864,57 +598,35 @@ CTA
 }
 
 .cta h2{
-
   font-size:clamp(42px,6vw,80px);
-
   margin-bottom:20px;
 }
 
 .cta p{
-
   max-width:700px;
-
   margin:auto auto 40px;
-
   line-height:1.8;
-
   color:#ddd;
 }
 
-/* ============================================================
-FOOTER
-============================================================ */
-
 footer{
-
   padding:70px 24px;
-
   text-align:center;
-
   border-top:1px solid rgba(255,255,255,.06);
-
   color:#a9a9a9;
 }
 
 .footer-links{
-
   display:flex;
-
   justify-content:center;
-
   gap:24px;
-
   flex-wrap:wrap;
-
   margin:24px 0;
 }
 
 .footer-links a{
-
   color:#d9d9d9;
-
   text-decoration:none;
-
   transition:.3s;
 }
 
@@ -922,14 +634,8 @@ footer{
   color:var(--gold);
 }
 
-/* ============================================================
-SCROLL REVEAL
-============================================================ */
-
 .hidden{
-
   opacity:0;
-
   transform:translateY(60px);
 
   transition:
@@ -938,9 +644,7 @@ SCROLL REVEAL
 }
 
 .show{
-
   opacity:1;
-
   transform:translateY(0);
 }
 
@@ -950,23 +654,13 @@ SCROLL REVEAL
 
 <body>
 
-<!-- LOADER -->
-
 <div class="loader">
-
   <div class="loader-logo">
-
     NEXORA <span>SHOP</span>
-
   </div>
-
 </div>
 
-<!-- PARTICLES -->
-
 <div class="particles"></div>
-
-<!-- NAV -->
 
 <nav class="nav">
 
@@ -977,63 +671,46 @@ SCROLL REVEAL
     </div>
 
     <div class="nav-links">
-
       <a href="#products">Productos</a>
-
       <a href="#testimonials">Reviews</a>
-
       <a href="#about">Nosotros</a>
-
       <a href="#contact">Contacto</a>
-
     </div>
+
+    <div class="menu-btn">☰</div>
 
   </div>
 
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
   <div class="hero-content hidden">
 
     <div class="eyebrow">
-
       <span class="dot"></span>
-
       Plataforma Digital Premium
-
     </div>
 
     <h1>
-
       NEXORA <span>SHOP</span>
-
     </h1>
 
     <p class="sub">
-
-      Recursos digitales premium diseñados para lectores,
-      emprendedores, creadores y mentes modernas que buscan
-      potenciar su vida digital.
-
+      Recursos digitales premium diseñados para lectores, emprendedores,
+      creadores y mentes modernas que buscan potenciar su vida digital.
     </p>
 
     <div class="hero-buttons">
 
       <button class="btn btn-primary"
       onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
-
         Explorar Productos →
-
       </button>
 
       <button class="btn btn-secondary"
       onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-
         Conocer Más
-
       </button>
 
     </div>
@@ -1041,3 +718,327 @@ SCROLL REVEAL
   </div>
 
 </section>
+
+<section id="products" class="hidden">
+
+  <div class="section-title">
+
+    <h2>Productos Premium</h2>
+
+    <p>
+      Descubrí herramientas, ebooks y recursos digitales
+      diseñados para potenciar tu creatividad y productividad.
+    </p>
+
+  </div>
+
+  <div class="products">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop" />
+
+      <div class="card-content">
+
+        <h3>Ebooks Premium</h3>
+
+        <p>
+          Guías digitales modernas sobre inteligencia artificial,
+          negocios y productividad avanzada.
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">$49</div>
+
+          <button class="btn btn-primary">
+            Comprar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1400&auto=format&fit=crop" />
+
+      <div class="card-content">
+
+        <h3>Plantillas Pro</h3>
+
+        <p>
+          Templates modernas para contenido,
+          productividad y diseño digital.
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">$29</div>
+
+          <button class="btn btn-primary">
+            Comprar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1400&auto=format&fit=crop" />
+
+      <div class="card-content">
+
+        <h3>Recursos Creativos</h3>
+
+        <p>
+          Assets premium diseñados para creadores,
+          freelancers y emprendedores digitales.
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">$79</div>
+
+          <button class="btn btn-primary">
+            Comprar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="testimonials" class="hidden">
+
+  <div class="section-title">
+    <h2>Lo que dicen nuestros clientes</h2>
+  </div>
+
+  <div class="testimonials">
+
+    <div class="testimonial">
+
+      <p>
+        “La calidad visual y el contenido de Nexora
+        están a otro nivel. Todo se siente premium.”
+      </p>
+
+      <div class="user">
+
+        <div class="avatar"></div>
+
+        <div>
+          <strong>Martina R.</strong><br>
+          Diseñadora Digital
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+        “Los ebooks me ayudaron muchísimo a organizar
+        mi negocio digital y mejorar mi productividad.”
+      </p>
+
+      <div class="user">
+
+        <div class="avatar"></div>
+
+        <div>
+          <strong>Lucas M.</strong><br>
+          Emprendedor
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+        “La estética y experiencia parecen de una startup internacional.”
+      </p>
+
+      <div class="user">
+
+        <div class="avatar"></div>
+
+        <div>
+          <strong>Sofía G.</strong><br>
+          Content Creator
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about" class="about hidden">
+
+  <div>
+
+    <div class="eyebrow">
+
+      <span class="dot"></span>
+
+      Quiénes Somos
+
+    </div>
+
+    <h2>
+      Mucho más que una tienda digital.
+    </h2>
+
+    <p>
+      Somos Nexora Studio, una plataforma digital nacida en Argentina creada para personas que buscan aprender, crear, organizarse y potenciar su vida digital con contenido moderno y de alto valor.
+    </p>
+
+    <p>
+      Reunimos ebooks, recursos digitales, herramientas,
+      plantillas y contenido premium diseñado para la nueva
+      generación de creadores y emprendedores.
+    </p>
+
+    <p>
+      Nuestro objetivo es construir una experiencia elegante,
+      moderna e inspiradora donde la creatividad y el conocimiento
+      se encuentren en un solo lugar.
+    </p>
+
+    <p style="color:#FFD95A;font-weight:500;">
+      El futuro pertenece a quienes crean, aprenden y evolucionan.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <div class="num">∞</div>
+        <div class="lbl">Ideas</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">24/7</div>
+        <div class="lbl">Acceso</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">Premium</div>
+        <div class="lbl">Experiencia</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="visual"></div>
+
+</section>
+
+<section id="contact" class="hidden">
+
+  <div class="cta">
+
+    <h2>
+      ¿Listo para descubrir la magia del mundo digital?
+    </h2>
+
+    <p>
+      Descubrí herramientas, contenido y recursos premium
+      creados para la nueva generación digital.
+    </p>
+
+    <button class="btn btn-primary"
+      onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      Comenzar →
+    </button>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="logo">
+    NEXORA <span>SHOP</span>
+  </div>
+
+  <div class="footer-links">
+    <a href="#products">Productos</a>
+    <a href="#about">Nosotros</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contacto</a>
+  </div>
+
+  <div>
+    © 2026 Nexora Studio — Todos los derechos reservados.
+  </div>
+
+</footer>
+
+<script>
+
+const particles = document.querySelector('.particles');
+
+for(let i=0;i<45;i++){
+
+  const p = document.createElement('span');
+
+  p.classList.add('particle');
+
+  p.style.left = Math.random()*100 + '%';
+
+  p.style.animationDuration =
+    (10 + Math.random()*15) + 's';
+
+  p.style.animationDelay =
+    Math.random()*10 + 's';
+
+  particles.appendChild(p);
+}
+
+const hiddenElements =
+document.querySelectorAll('.hidden');
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add('show');
+    }
+
+  });
+
+},{
+  threshold:.15
+});
+
+hiddenElements.forEach(el=>{
+
+  observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
