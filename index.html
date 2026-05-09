@@ -1200,41 +1200,89 @@ SCROLL REVEAL
 
     <p>
 
-      Nexora Studio nace con la visión de crear una experiencia moderna,
-      elegante y cinematográfica para la nueva generación digital.
+      Somos Nexora Studio, una plataforma digital nacida en Argentina creada para personas que buscan aprender, crear, organizarse y potenciar su vida digital con contenido moderno y de alto valor.
+
+      </p>
+
+    <p>
+
+      Reunimos ebooks, recursos digitales, herramientas,
+      plantillas y contenido premium diseñado para la nueva
+      generación de creadores y emprendedores.
 
     </p>
 
+    <p>
+
+      Nuestro objetivo es construir una experiencia elegante,
+      moderna e inspiradora donde la creatividad y el conocimiento
+      se encuentren en un solo lugar.
+
+    </p>
+
+    <p style="color:#FFD95A;font-weight:500;">
+
+      El futuro pertenece a quienes crean, aprenden y evolucionan.
+
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+
+        <div class="num">∞</div>
+
+        <div class="lbl">Ideas</div>
+
+      </div>
+
+      <div class="stat">
+
+        <div class="num">24/7</div>
+
+        <div class="lbl">Acceso</div>
+
+      </div>
+
+      <div class="stat">
+
+        <div class="num">Premium</div>
+
+        <div class="lbl">Experiencia</div>
+
+      </div>
+
+    </div>
+
   </div>
+
+  <div class="visual"></div>
 
 </section>
 
 <!-- CTA -->
 
-<section id="contact" class="hidden">
+<section class="cta-final hidden" id="contact">
 
-  <div class="cta">
+  <h2>
 
-    <h2>
+    ¿Listo para descubrir la magia del mundo digital?
 
-      El futuro digital comienza ahora.
+  </h2>
 
-    </h2>
+  <p>
 
-    <p>
+    Descubrí herramientas, contenido y recursos premium
+    creados para la nueva generación digital.
 
-      Descubrí recursos premium diseñados para ayudarte
-      a crear, aprender y evolucionar.
+  </p>
 
-    </p>
+  <button class="btn btn-primary"
+    onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
 
-    <button class="btn btn-primary">
+    Comenzar →
 
-      Explorar Nexora →
-
-    </button>
-
-  </div>
+  </button>
 
 </section>
 
@@ -1248,27 +1296,79 @@ SCROLL REVEAL
 
   </div>
 
-  <div class="footer-links">
+  <div class="links">
 
-    <a href="#products">Productos</a>
+    <a onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      Productos
+    </a>
 
-    <a href="#about">Nosotros</a>
+    <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      Nosotros
+    </a>
 
-    <a href="#testimonials">Reviews</a>
-
-    <a href="#contact">Contacto</a>
+    <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Contacto
+    </a>
 
   </div>
 
   <div>
 
-    © 2026 Nexora Studio — Todos los derechos reservados.
+    © 2026 Nexora Shop — Todos los derechos reservados.
 
   </div>
 
 </footer>
 
+<!-- SCRIPTS -->
+
 <script>
+
+/* ============================================================
+REVEAL ANIMATION
+============================================================ */
+
+const revealElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add('show');
+
+    }
+
+  });
+
+},{
+  threshold:.12
+});
+
+revealElements.forEach(el=>{
+
+  observer.observe(el);
+
+});
+
+/* ============================================================
+SPOTLIGHT
+============================================================ */
+
+const spotlight = document.createElement('div');
+
+spotlight.classList.add('spotlight');
+
+document.body.appendChild(spotlight);
+
+document.addEventListener('mousemove',(e)=>{
+
+  spotlight.style.left = e.clientX + 'px';
+  spotlight.style.top = e.clientY + 'px';
+
+});
+
 
 /* ============================================================
 PARTICLES
