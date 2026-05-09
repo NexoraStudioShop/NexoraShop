@@ -1,6 +1,6 @@
 <!-- ============================================================
 NEXORA SHOP — PREMIUM STARTUP VERSION
-CURSOR NORMAL + ANIMACIONES PREMIUM
+COMPLETO + CURSOR NORMAL
 ============================================================ -->
 
 <div id="nexora-root">
@@ -8,10 +8,6 @@ CURSOR NORMAL + ANIMACIONES PREMIUM
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
-
-/* ============================================================
-RESET
-============================================================ */
 
 html,
 body{
@@ -28,16 +24,11 @@ body{
   position:relative;
 }
 
-/* ============================================================
-ROOT
-============================================================ */
-
 #nexora-root{
 
   --gold:#FFD95A;
   --gold-light:#FFF0A6;
   --gold-dark:#D6A419;
-
   --white:#F5F5F5;
 
   width:100%;
@@ -61,10 +52,6 @@ ROOT
 
   position:relative;
 }
-
-/* ============================================================
-GLOBAL
-============================================================ */
 
 #nexora-root *{
   box-sizing:border-box;
@@ -898,6 +885,197 @@ FOOTER
   </div>
 
 </section>
+
+<!-- PRODUCTS -->
+
+<section class="block hidden" id="products">
+
+  <div class="section-head">
+
+    <div class="eyebrow">
+      <span class="dot"></span>
+      Productos Disponibles
+    </div>
+
+    <h2>
+      Catálogo Digital Premium
+    </h2>
+
+  </div>
+
+  <div class="products">
+
+    <article class="card">
+
+      <div class="mockup">
+        <div class="icon">Aa</div>
+      </div>
+
+      <h3>Ebooks Premium</h3>
+
+      <p class="desc">
+        Guías digitales modernas sobre negocios e inteligencia artificial.
+      </p>
+
+      <div class="row">
+        <div class="price">$49</div>
+        <button class="buy">Comprar</button>
+      </div>
+
+    </article>
+
+    <article class="card">
+
+      <div class="mockup">
+        <div class="icon">◎</div>
+      </div>
+
+      <h3>Plantillas Pro</h3>
+
+      <p class="desc">
+        Templates modernas para organización y diseño digital.
+      </p>
+
+      <div class="row">
+        <div class="price">$29</div>
+        <button class="buy">Comprar</button>
+      </div>
+
+    </article>
+
+    <article class="card">
+
+      <div class="mockup">
+        <div class="icon">★</div>
+      </div>
+
+      <h3>Recursos Creativos</h3>
+
+      <p class="desc">
+        Assets premium para emprendedores y creadores digitales.
+      </p>
+
+      <div class="row">
+        <div class="price">$79</div>
+        <button class="buy">Comprar</button>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about hidden" id="about">
+
+  <div>
+
+    <div class="eyebrow">
+      <span class="dot"></span>
+      Quiénes Somos
+    </div>
+
+    <h2>
+      Mucho más que una tienda digital.
+    </h2>
+
+    <p>
+      Somos Nexora Studio, una plataforma digital nacida en Argentina creada para personas que buscan aprender, crear, organizarse y potenciar su vida digital con contenido moderno y de alto valor.
+    </p>
+
+    <p>
+      En Nexora reunimos una colección cuidadosamente seleccionada de ebooks, recursos digitales, cursos, herramientas creativas, plantillas, guías y contenido premium pensado para la nueva generación de creadores, emprendedores y mentes curiosas.
+    </p>
+
+    <p>
+      Nuestro objetivo no es solo vender productos digitales, sino construir un espacio donde la inspiración, el conocimiento y la creatividad se encuentren en una experiencia visual moderna, elegante y accesible.
+    </p>
+
+    <p>
+      Desde productividad y diseño, hasta fitness, negocios, inteligencia artificial, desarrollo personal, cocina y contenido educativo.
+    </p>
+
+    <p style="color:#FFD95A;font-weight:500;">
+      Porque el futuro pertenece a quienes aprenden, crean y se animan a ir más allá.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <div class="num">∞</div>
+        <div class="lbl">Ideas</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">24/7</div>
+        <div class="lbl">Acceso</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">Premium</div>
+        <div class="lbl">Experiencia</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="visual"></div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-final hidden" id="contact">
+
+  <h2>
+    ¿Listo para potenciar tu mundo digital?
+  </h2>
+
+  <p>
+    Descubrí herramientas, contenido y recursos premium creados para la nueva generación digital.
+  </p>
+
+  <button class="btn btn-primary"
+    onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+
+    Comenzar →
+
+  </button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="logo">
+    NEXORA <span>SHOP</span>
+  </div>
+
+  <div class="links">
+
+    <a onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      Productos
+    </a>
+
+    <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      Nosotros
+    </a>
+
+    <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Contacto
+    </a>
+
+  </div>
+
+  <div>
+    © 2026 Nexora Shop — Todos los derechos reservados.
+  </div>
+
+</footer>
 
 <!-- REVEAL SCRIPT -->
 
