@@ -518,11 +518,11 @@ section{
   margin-bottom:80px;
 }
 
-..section-title h2{
+.section-title h2{
 
-  font-size:clamp(46px,6vw,76px);
+  font-size:clamp(50px,6vw,82px);
 
-  line-height:1.05;
+  line-height:1.08;
 
   letter-spacing:-0.04em;
 
@@ -531,9 +531,9 @@ section{
 
 #products .section-title h2{
 
-  font-size:clamp(58px,7vw,96px);
+  font-size:clamp(56px,7vw,88px);
 
-  line-height:1.02;
+  line-height:1.04;
 
   letter-spacing:-0.05em;
 }
@@ -751,15 +751,16 @@ ABOUT
 
   line-height:1.8;
 }
+
 .about h2{
 
-  font-size:clamp(44px,6vw,72px);
+  font-size:clamp(48px,6vw,78px);
 
-  line-height:1.12;
+  line-height:1.16;
 
   letter-spacing:-0.04em;
 
-  margin-bottom:28px;
+  margin-bottom:30px;
 
   background:linear-gradient(
     180deg,
@@ -985,8 +986,6 @@ SCROLL REVEAL
 
     </div>
 
-    <div class="menu-btn">☰</div>
-
   </div>
 
 </nav>
@@ -1149,292 +1148,3 @@ SCROLL REVEAL
   </div>
 
 </section>
-
-<!-- TESTIMONIALS -->
-
-<section id="testimonials" class="hidden">
-
-  <div class="section-title">
-
-    <h2>Lo que dicen nuestros clientes</h2>
-
-  </div>
-
-  <div class="testimonials">
-
-    <div class="testimonial">
-
-      <p>
-
-        “La calidad visual y el contenido de Nexora
-        están a otro nivel. Todo se siente premium.”
-
-      </p>
-
-      <div class="user">
-
-        <div class="avatar"></div>
-
-        <div>
-
-          <strong>Martina R.</strong><br>
-          Diseñadora Digital
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="testimonial">
-
-      <p>
-
-        “Los ebooks me ayudaron muchísimo a organizar
-        mi negocio digital y mejorar mi productividad.”
-
-      </p>
-
-      <div class="user">
-
-        <div class="avatar"></div>
-
-        <div>
-
-          <strong>Lucas M.</strong><br>
-          Emprendedor
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="testimonial">
-
-      <p>
-
-        “La estética y experiencia parecen de una startup internacional.”
-
-      </p>
-
-      <div class="user">
-
-        <div class="avatar"></div>
-
-        <div>
-
-          <strong>Sofía G.</strong><br>
-          Content Creator
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="about hidden">
-
-  <div>
-
-    <div class="eyebrow">
-
-      <span class="dot"></span>
-
-      Quiénes Somos
-
-    </div>
-
-    <h2>
-
-      Mucho más que una tienda digital.
-
-    </h2>
-
-    <p>
-
-      Somos Nexora Studio, una plataforma digital nacida en Argentina creada para personas que buscan aprender, crear, organizarse y potenciar su vida digital con contenido moderno y de alto valor.
-
-    </p>
-
-    <p>
-
-      Reunimos ebooks, recursos digitales, herramientas,
-      plantillas y contenido premium diseñado para la nueva
-      generación de creadores y emprendedores.
-
-    </p>
-
-    <p>
-
-      Nuestro objetivo es construir una experiencia elegante,
-      moderna e inspiradora donde la creatividad y el conocimiento
-      se encuentren en un solo lugar.
-
-    </p>
-
-    <p style="color:#FFD95A;font-weight:500;">
-
-      El futuro pertenece a quienes crean, aprenden y evolucionan.
-
-    </p>
-
-    <div class="stats">
-
-      <div class="stat">
-
-        <div class="num">∞</div>
-
-        <div class="lbl">Ideas</div>
-
-      </div>
-
-      <div class="stat">
-
-        <div class="num">24/7</div>
-
-        <div class="lbl">Acceso</div>
-
-      </div>
-
-      <div class="stat">
-
-        <div class="num">Premium</div>
-
-        <div class="lbl">Experiencia</div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="visual"></div>
-
-</section>
-
-<!-- CTA -->
-
-<section id="contact" class="hidden">
-
-  <div class="cta">
-
-    <h2>
-
-      ¿Listo para descubrir la magia del mundo digital?
-
-    </h2>
-
-    <p>
-
-      Descubrí herramientas, contenido y recursos premium
-      creados para la nueva generación digital.
-
-    </p>
-
-    <button class="btn btn-primary"
-      onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
-
-      Comenzar →
-
-    </button>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="logo">
-
-    NEXORA <span>SHOP</span>
-
-  </div>
-
-  <div class="footer-links">
-
-    <a href="#products">Productos</a>
-
-    <a href="#about">Nosotros</a>
-
-    <a href="#testimonials">Reviews</a>
-
-    <a href="#contact">Contacto</a>
-
-  </div>
-
-  <div>
-
-    © 2026 Nexora Studio — Todos los derechos reservados.
-
-  </div>
-
-</footer>
-
-<script>
-
-/* ============================================================
-PARTICLES
-============================================================ */
-
-const particles = document.querySelector('.particles');
-
-for(let i=0;i<45;i++){
-
-  const p = document.createElement('span');
-
-  p.classList.add('particle');
-
-  p.style.left = Math.random()*100 + '%';
-
-  p.style.animationDuration =
-    (10 + Math.random()*15) + 's';
-
-  p.style.animationDelay =
-    Math.random()*10 + 's';
-
-  particles.appendChild(p);
-}
-
-/* ============================================================
-SCROLL REVEAL
-============================================================ */
-
-const hiddenElements =
-document.querySelectorAll('.hidden');
-
-const observer =
-new IntersectionObserver((entries)=>{
-
-  entries.forEach(entry=>{
-
-    if(entry.isIntersecting){
-
-      entry.target.classList.add('show');
-    }
-
-  });
-
-},{
-  threshold:.15
-});
-
-hiddenElements.forEach(el=>{
-
-  observer.observe(el);
-
-});
-
-</script>
-
-</body>
-
-</html>
