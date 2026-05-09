@@ -1,0 +1,803 @@
+<!-- ============================================================
+NEXORA SHOP — GOOGLE SITES VERSION
+BOTONES FUNCIONANDO + SCROLL SUAVE
+VERSIÓN LIMPIA Y ORDENADA
+============================================================ -->
+
+<div id="nexora-root">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* ============================================================
+RESET
+============================================================ */
+
+html,
+body{
+  margin:0 !important;
+  padding:0 !important;
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:hidden !important;
+  background:#161616 !important;
+}
+
+body{
+  position:relative;
+}
+
+#nexora-root{
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+
+  --gold:#FFD95A;
+  --gold-light:#FFF0A6;
+  --gold-dark:#D6A419;
+
+  --white:#F5F5F5;
+
+  font-family:'Inter',sans-serif;
+  color:var(--white);
+
+  background:
+    radial-gradient(circle at top left, rgba(255,217,90,.34), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(255,217,90,.24), transparent 45%),
+    linear-gradient(
+      180deg,
+      #2b2110 0%,
+      #1b1711 35%,
+      #121212 100%
+    );
+}
+
+#nexora-root *{
+  box-sizing:border-box;
+  max-width:100%;
+}
+
+#nexora-root a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ============================================================
+NAVBAR
+============================================================ */
+
+#nexora-root .nav{
+  position:relative;
+  z-index:999;
+
+  backdrop-filter:blur(18px);
+
+  background:rgba(30,22,12,.78);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+#nexora-root .nav-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+#nexora-root .logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:.22em;
+}
+
+#nexora-root .logo span{
+  color:var(--gold);
+}
+
+#nexora-root .nav-links{
+  display:flex;
+  gap:32px;
+  color:#eee;
+  font-size:14px;
+}
+
+#nexora-root .nav-links a{
+  cursor:pointer;
+}
+
+#nexora-root .nav-links a:hover{
+  color:var(--gold);
+}
+
+@media(max-width:760px){
+
+  #nexora-root .nav-links{
+    display:none;
+  }
+
+}
+
+/* ============================================================
+BUTTONS
+============================================================ */
+
+#nexora-root .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  padding:15px 28px;
+
+  border-radius:999px;
+
+  font-size:14px;
+  font-weight:600;
+
+  border:none;
+
+  cursor:pointer;
+
+  transition:.35s;
+}
+
+#nexora-root .btn-primary{
+  background:linear-gradient(
+    135deg,
+    #FFF0A6,
+    #FFD95A 50%,
+    #D6A419
+  );
+
+  color:#111;
+
+  box-shadow:
+    0 15px 50px rgba(255,217,90,.55),
+    0 0 35px rgba(255,217,90,.35);
+}
+
+#nexora-root .btn-primary:hover{
+  transform:translateY(-4px);
+}
+
+#nexora-root .btn-ghost{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  color:#fff;
+}
+
+#nexora-root .btn-ghost:hover{
+  border-color:var(--gold);
+}
+
+/* ============================================================
+HERO
+============================================================ */
+
+#nexora-root .hero{
+  min-height:92vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:120px 24px 90px;
+
+  position:relative;
+}
+
+#nexora-root .hero-content{
+  max-width:980px;
+  position:relative;
+  z-index:2;
+}
+
+#nexora-root .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding:9px 16px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.06);
+
+  border:1px solid rgba(255,255,255,.10);
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.18em;
+
+  color:#fff;
+
+  margin-bottom:32px;
+}
+
+#nexora-root .dot{
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:var(--gold);
+
+  box-shadow:0 0 14px var(--gold);
+}
+
+#nexora-root .hero h1{
+  font-family:'Space Grotesk',sans-serif;
+
+  font-size:clamp(56px,10vw,145px);
+
+  line-height:.92;
+
+  margin-bottom:26px;
+
+  background:linear-gradient(
+    180deg,
+    #ffffff,
+    #f0f0f0 55%,
+    #b6b6b6
+  );
+
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+#nexora-root .hero h1 .accent{
+  background:linear-gradient(
+    135deg,
+    #FFF0A6,
+    #FFD95A 50%,
+    #D6A419
+  );
+
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+#nexora-root .hero .sub{
+  max-width:760px;
+
+  margin:auto auto 42px;
+
+  font-size:clamp(16px,1.8vw,20px);
+
+  color:#ececec;
+
+  font-weight:300;
+}
+
+#nexora-root .hero-cta{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+/* ============================================================
+SECTIONS
+============================================================ */
+
+#nexora-root section.block,
+#nexora-root .about{
+  max-width:1200px;
+  margin:auto;
+  padding:120px 24px;
+}
+
+#nexora-root .section-head{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+#nexora-root .section-head h2,
+#nexora-root .about h2,
+#nexora-root .cta-final h2{
+  font-size:clamp(34px,5vw,58px);
+
+  margin-bottom:16px;
+
+  background:linear-gradient(180deg,#fff,#dddddd);
+
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* ============================================================
+PRODUCTS
+============================================================ */
+
+#nexora-root .products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+@media(max-width:980px){
+
+  #nexora-root .products{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:640px){
+
+  #nexora-root .products{
+    grid-template-columns:1fr;
+  }
+
+}
+
+#nexora-root .card{
+  padding:24px;
+
+  border-radius:28px;
+
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.04)
+  );
+
+  border:1px solid rgba(255,255,255,.10);
+
+  backdrop-filter:blur(14px);
+
+  transition:.35s;
+}
+
+#nexora-root .card:hover{
+  transform:translateY(-6px);
+}
+
+#nexora-root .mockup{
+  aspect-ratio:4/3;
+
+  border-radius:18px;
+
+  margin-bottom:22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:radial-gradient(circle at 30% 30%, #56411d, #1d1d1d 70%);
+}
+
+#nexora-root .icon{
+  font-size:52px;
+  font-weight:700;
+
+  background:linear-gradient(
+    135deg,
+    #FFF0A6,
+    #FFD95A,
+    #D6A419
+  );
+
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+#nexora-root .card h3{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+#nexora-root .desc{
+  color:#e2e2e2;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+#nexora-root .row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+#nexora-root .price{
+  color:var(--gold);
+  font-size:24px;
+  font-weight:700;
+}
+
+#nexora-root .buy{
+  padding:11px 18px;
+
+  border-radius:999px;
+
+  background:rgba(255,217,90,.14);
+
+  border:1px solid rgba(255,217,90,.30);
+
+  color:var(--gold);
+}
+
+/* ============================================================
+ABOUT
+============================================================ */
+
+#nexora-root .about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+@media(max-width:900px){
+
+  #nexora-root .about{
+    grid-template-columns:1fr;
+  }
+
+}
+
+#nexora-root .about p{
+  color:#efefef;
+  margin-bottom:16px;
+}
+
+#nexora-root .visual{
+  aspect-ratio:1/1;
+
+  border-radius:32px;
+
+  background:
+    linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.18)),
+    url('https://i.postimg.cc/prwfX6Rh/eabdfe39-8d0c-474f-b03e-d105dcf436d5.png') center/cover no-repeat;
+
+  border:1px solid rgba(255,217,90,.28);
+}
+
+#nexora-root .stats{
+  display:flex;
+  gap:34px;
+  flex-wrap:wrap;
+  margin-top:32px;
+}
+
+#nexora-root .num{
+  color:var(--gold);
+  font-size:32px;
+  font-weight:700;
+}
+
+#nexora-root .lbl{
+  color:#c8c8c8;
+  font-size:12px;
+  text-transform:uppercase;
+}
+
+/* ============================================================
+CTA
+============================================================ */
+
+#nexora-root .cta-final{
+  margin:80px auto 120px;
+
+  max-width:1100px;
+
+  padding:90px 32px;
+
+  border-radius:38px;
+
+  text-align:center;
+
+  background:linear-gradient(
+    135deg,
+    rgba(255,217,90,.22),
+    rgba(255,255,255,.04)
+  );
+
+  border:1px solid rgba(255,217,90,.28);
+}
+
+#nexora-root .cta-final p{
+  max-width:600px;
+
+  margin:20px auto 36px;
+
+  color:#ececec;
+}
+
+/* ============================================================
+FOOTER
+============================================================ */
+
+#nexora-root footer{
+  border-top:1px solid rgba(255,255,255,.08);
+
+  padding:50px 24px;
+
+  text-align:center;
+
+  color:#d0d0d0;
+
+  font-size:13px;
+}
+
+#nexora-root footer .links{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  margin:18px 0;
+  flex-wrap:wrap;
+}
+
+</style>
+
+<!-- NAV -->
+
+<nav class="nav">
+
+  <div class="nav-inner">
+
+    <div class="logo">
+      NEXORA <span>SHOP</span>
+    </div>
+
+    <div class="nav-links">
+
+      <a onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        Productos
+      </a>
+
+      <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+        Nosotros
+      </a>
+
+      <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Contacto
+      </a>
+
+    </div>
+
+    <button class="btn btn-ghost"
+      onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      Explorar
+    </button>
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      <span class="dot"></span>
+      Plataforma Digital Premium
+    </div>
+
+    <h1>
+      NEXORA <span class="accent">SHOP</span>
+    </h1>
+
+    <p class="sub">
+      Tu tienda de productos digitales premium.
+    </p>
+
+    <div class="hero-cta">
+
+      <button class="btn btn-primary"
+        onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        Explorar la Shop →
+      </button>
+
+      <button class="btn btn-ghost"
+        onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+        Quiénes Somos
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="block" id="products">
+
+  <div class="section-head">
+
+    <div class="eyebrow">
+      <span class="dot"></span>
+      Productos Disponibles
+    </div>
+
+    <h2>
+      Catálogo Digital Premium
+    </h2>
+
+  </div>
+
+  <div class="products">
+
+    <article class="card">
+
+      <div class="mockup">
+        <div class="icon">Aa</div>
+      </div>
+
+      <h3>Ebooks Premium</h3>
+
+      <p class="desc">
+        Guías digitales modernas sobre negocios e inteligencia artificial.
+      </p>
+
+      <div class="row">
+        <div class="price">$49</div>
+        <button class="buy">Comprar</button>
+      </div>
+
+    </article>
+
+    <article class="card">
+
+      <div class="mockup">
+        <div class="icon">◎</div>
+      </div>
+
+      <h3>Plantillas Pro</h3>
+
+      <p class="desc">
+        Templates modernas para organización y diseño digital.
+      </p>
+
+      <div class="row">
+        <div class="price">$29</div>
+        <button class="buy">Comprar</button>
+      </div>
+
+    </article>
+
+    <article class="card">
+
+      <div class="mockup">
+        <div class="icon">★</div>
+      </div>
+
+      <h3>Recursos Creativos</h3>
+
+      <p class="desc">
+        Assets premium para emprendedores y creadores digitales.
+      </p>
+
+      <div class="row">
+        <div class="price">$79</div>
+        <button class="buy">Comprar</button>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div>
+
+    <div class="eyebrow">
+      <span class="dot"></span>
+      Quiénes Somos
+    </div>
+
+    <h2>
+      Mucho más que una tienda digital.
+    </h2>
+
+    <p>
+      Somos Nexora Studio, una plataforma digital nacida en Argentina creada para personas que buscan aprender, crear, organizarse y potenciar su vida digital con contenido moderno y de alto valor.
+    </p>
+
+    <p>
+      En Nexora reunimos una colección cuidadosamente seleccionada de ebooks, recursos digitales, cursos, herramientas creativas, plantillas, guías y contenido premium pensado para la nueva generación de creadores, emprendedores y mentes curiosas.
+    </p>
+
+    <p>
+      Nuestro objetivo no es solo vender productos digitales, sino construir un espacio donde la inspiración, el conocimiento y la creatividad se encuentren en una experiencia visual moderna, elegante y accesible.
+    </p>
+
+    <p>
+      Desde productividad y diseño, hasta fitness, negocios, inteligencia artificial, desarrollo personal, cocina y contenido educativo.
+    </p>
+
+    <p style="color:#FFD95A;font-weight:500;">
+      Porque el futuro pertenece a quienes aprenden, crean y se animan a ir más allá.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <div class="num">∞</div>
+        <div class="lbl">Ideas</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">24/7</div>
+        <div class="lbl">Acceso</div>
+      </div>
+
+      <div class="stat">
+        <div class="num">Premium</div>
+        <div class="lbl">Experiencia</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="visual"></div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-final" id="contact">
+
+  <h2>
+    ¿Listo para potenciar tu mundo digital?
+  </h2>
+
+  <p>
+    Descubrí herramientas, contenido y recursos premium creados para la nueva generación digital.
+  </p>
+
+  <button class="btn btn-primary"
+    onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+    Comenzar →
+  </button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="logo">
+    NEXORA <span>SHOP</span>
+  </div>
+
+  <div class="links">
+
+    <a onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      Productos
+    </a>
+
+    <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      Nosotros
+    </a>
+
+    <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Contacto
+    </a>
+
+  </div>
+
+  <div>
+    © 2026 Nexora Shop — Todos los derechos reservados.
+  </div>
+
+</footer>
+
+</div>
