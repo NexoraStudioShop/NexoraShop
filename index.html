@@ -1,7 +1,6 @@
 <!-- ============================================================
-NEXORA SHOP — PREMIUM VERSION
-MOTION + GLASS + STARTUP STYLE
-CURSOR NORMAL RESTAURADO
+NEXORA SHOP — PREMIUM STARTUP VERSION
+CURSOR NORMAL + ANIMACIONES PREMIUM
 ============================================================ -->
 
 <div id="nexora-root">
@@ -28,6 +27,10 @@ body{
 body{
   position:relative;
 }
+
+/* ============================================================
+ROOT
+============================================================ */
 
 #nexora-root{
 
@@ -447,6 +450,51 @@ HERO
 }
 
 /* ============================================================
+SECTIONS
+============================================================ */
+
+#nexora-root section.block,
+#nexora-root .about{
+
+  max-width:1250px;
+
+  margin:auto;
+
+  padding:150px 28px;
+
+  position:relative;
+  z-index:2;
+}
+
+#nexora-root .section-head{
+
+  text-align:center;
+
+  margin-bottom:80px;
+}
+
+#nexora-root .section-head h2,
+#nexora-root .about h2,
+#nexora-root .cta-final h2{
+
+  font-size:clamp(38px,5vw,64px);
+
+  line-height:1.1;
+
+  margin-bottom:18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #d9d9d9
+    );
+
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* ============================================================
 PRODUCTS
 ============================================================ */
 
@@ -554,6 +602,182 @@ PRODUCTS
   color:transparent;
 }
 
+#nexora-root .card h3{
+
+  font-size:24px;
+
+  margin-bottom:10px;
+}
+
+#nexora-root .desc{
+
+  color:#e4e4e4;
+
+  margin-bottom:24px;
+
+  line-height:1.7;
+
+  font-size:14px;
+}
+
+#nexora-root .row{
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+#nexora-root .price{
+
+  color:var(--gold);
+
+  font-size:28px;
+
+  font-weight:700;
+}
+
+#nexora-root .buy{
+
+  padding:12px 18px;
+
+  border-radius:999px;
+
+  background:rgba(255,217,90,.10);
+
+  border:1px solid rgba(255,217,90,.22);
+
+  color:var(--gold);
+
+  transition:.35s;
+
+  cursor:pointer;
+}
+
+#nexora-root .buy:hover{
+
+  background:rgba(255,217,90,.18);
+
+  transform:translateY(-3px);
+}
+
+/* ============================================================
+ABOUT
+============================================================ */
+
+#nexora-root .about{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:80px;
+
+  align-items:center;
+}
+
+@media(max-width:900px){
+
+  #nexora-root .about{
+    grid-template-columns:1fr;
+  }
+
+}
+
+#nexora-root .about p{
+
+  color:#ececec;
+
+  margin-bottom:18px;
+
+  line-height:1.8;
+}
+
+#nexora-root .visual{
+
+  aspect-ratio:1/1;
+
+  border-radius:36px;
+
+  background:
+    linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.18)),
+    url('https://i.postimg.cc/prwfX6Rh/eabdfe39-8d0c-474f-b03e-d105dcf436d5.png') center/cover no-repeat;
+
+  border:1px solid rgba(255,217,90,.22);
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.34);
+}
+
+#nexora-root .stats{
+
+  display:flex;
+
+  gap:40px;
+
+  flex-wrap:wrap;
+
+  margin-top:36px;
+}
+
+#nexora-root .num{
+
+  color:var(--gold);
+
+  font-size:34px;
+
+  font-weight:700;
+}
+
+#nexora-root .lbl{
+
+  color:#bfbfbf;
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.12em;
+}
+
+/* ============================================================
+CTA
+============================================================ */
+
+#nexora-root .cta-final{
+
+  margin:40px auto 140px;
+
+  max-width:1100px;
+
+  padding:100px 34px;
+
+  border-radius:42px;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,217,90,.14),
+      rgba(255,255,255,.03)
+    );
+
+  border:1px solid rgba(255,217,90,.18);
+
+  backdrop-filter:blur(18px);
+}
+
+#nexora-root .cta-final p{
+
+  max-width:650px;
+
+  margin:22px auto 40px;
+
+  color:#ececec;
+
+  line-height:1.8;
+}
+
 /* ============================================================
 FOOTER
 ============================================================ */
@@ -569,6 +793,30 @@ FOOTER
   color:#bdbdbd;
 
   font-size:13px;
+}
+
+#nexora-root footer .links{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:26px;
+
+  margin:20px 0;
+
+  flex-wrap:wrap;
+}
+
+#nexora-root footer .links a{
+
+  transition:.3s;
+
+  cursor:pointer;
+}
+
+#nexora-root footer .links a:hover{
+  color:var(--gold);
 }
 
 </style>
@@ -617,24 +865,16 @@ FOOTER
   <div class="hero-content hidden">
 
     <div class="eyebrow">
-
       <span class="dot"></span>
-
       Plataforma Digital Premium
-
     </div>
 
     <h1>
-
       NEXORA <span class="accent">SHOP</span>
-
     </h1>
 
     <p class="sub">
-
-      Recursos digitales premium diseñados para emprendedores,
-      creadores y mentes modernas que buscan potenciar su vida digital.
-
+      Tu tienda de productos digitales premium.
     </p>
 
     <div class="hero-cta">
