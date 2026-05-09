@@ -1,299 +1,1337 @@
-export default function NexoraUltraPremium() {
-  return (
-    <div className="min-h-screen bg-[#050505] text-white overflow-hidden relative font-sans">
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-yellow-400/10 blur-3xl rounded-full" />
-        <div className="absolute top-[30%] left-[10%] w-[500px] h-[500px] bg-yellow-300/10 blur-3xl rounded-full" />
-        <div className="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-yellow-500/10 blur-3xl rounded-full" />
-      </div>
+<!-- ============================================================
+NEXORA SHOP — CINEMATIC PREMIUM EDITION
+APPLE / LINEAR / STRIPE STYLE
+FULL HTML VERSION
+============================================================ -->
 
-      {/* PARTICLES */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(35)].map((_, i) => (
-          <span
-            key={i}
-            className="absolute w-[2px] h-[2px] bg-yellow-300/40 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
-      </div>
+<!DOCTYPE html>
+<html lang="es">
 
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-50 backdrop-blur-2xl border-b border-white/10 bg-black/40">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <div className="text-xl tracking-[0.3em] font-bold">
-            NEXORA <span className="text-yellow-300">SHOP</span>
-          </div>
+<head>
 
-          <nav className="hidden md:flex gap-10 text-sm text-white/80">
-            <a href="#products" className="hover:text-yellow-300 transition">Productos</a>
-            <a href="#about" className="hover:text-yellow-300 transition">Nosotros</a>
-            <a href="#reviews" className="hover:text-yellow-300 transition">Reviews</a>
-            <a href="#contact" className="hover:text-yellow-300 transition">Contacto</a>
-          </nav>
+<meta charset="UTF-8" />
 
-          <button className="hidden md:flex px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-yellow-300/40 hover:-translate-y-1 transition-all duration-300">
-            Explorar
-          </button>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          <button className="md:hidden flex flex-col gap-1.5">
-            <span className="w-6 h-[2px] bg-white rounded-full"></span>
-            <span className="w-6 h-[2px] bg-white rounded-full"></span>
-            <span className="w-6 h-[2px] bg-white rounded-full"></span>
-          </button>
-        </div>
-      </header>
+<title>Nexora Shop — Recursos Digitales Premium</title>
 
-      {/* HERO */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 text-center">
-        <div className="max-w-6xl mx-auto">
-          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-10 text-xs tracking-[0.2em] uppercase text-white/80">
-            <span className="w-2 h-2 rounded-full bg-yellow-300 shadow-[0_0_20px_rgba(253,224,71,1)]"></span>
-            Plataforma Digital Premium
-          </div>
+<meta name="description"
+content="Ebooks, herramientas y recursos digitales premium para creadores, emprendedores y mentes modernas." />
 
-          <h1 className="text-[4rem] md:text-[8rem] lg:text-[10rem] leading-none tracking-[-0.06em] font-black mb-8 bg-gradient-to-b from-white via-zinc-200 to-zinc-500 text-transparent bg-clip-text">
-            NEXORA <span className="bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-600 text-transparent bg-clip-text">SHOP</span>
-          </h1>
+<meta name="keywords"
+content="ebooks, recursos digitales, IA, productividad, diseño, emprendedores" />
 
-          <p className="max-w-3xl mx-auto text-lg md:text-2xl text-zinc-300 leading-relaxed mb-12 font-light">
-            Diseñamos recursos digitales premium para la nueva generación de creadores,
-            emprendedores y mentes modernas.
-          </p>
+<meta name="author" content="Nexora Studio" />
 
-          <div className="flex flex-wrap items-center justify-center gap-5">
-            <button className="px-8 py-4 rounded-full bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-600 text-black font-semibold shadow-[0_20px_60px_rgba(250,204,21,0.35)] hover:scale-105 hover:-translate-y-1 transition-all duration-500">
-              Explorar Productos →
-            </button>
+<meta property="og:title" content="Nexora Shop" />
+<meta property="og:description"
+content="Recursos digitales premium para potenciar tu mundo digital." />
 
-            <button className="px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-yellow-300/40 hover:-translate-y-1 transition-all duration-500">
-              Conocer Más
-            </button>
-          </div>
-        </div>
-      </section>
+<meta property="og:type" content="website" />
 
-      {/* TRUST BAR */}
-      <section className="relative z-10 border-y border-white/10 bg-white/[0.02] backdrop-blur-2xl">
-        <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-yellow-300">24/7</div>
-            <div className="text-sm text-zinc-400 mt-2">Acceso instantáneo</div>
-          </div>
+<link rel="icon"
+href="https://i.postimg.cc/prwfX6Rh/eabdfe39-8d0c-474f-b03e-d105dcf436d5.png" />
 
-          <div>
-            <div className="text-3xl font-bold text-yellow-300">Premium</div>
-            <div className="text-sm text-zinc-400 mt-2">Experiencia moderna</div>
-          </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-          <div>
-            <div className="text-3xl font-bold text-yellow-300">∞</div>
-            <div className="text-sm text-zinc-400 mt-2">Ideas digitales</div>
-          </div>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-          <div>
-            <div className="text-3xl font-bold text-yellow-300">Global</div>
-            <div className="text-sm text-zinc-400 mt-2">Disponible en todo el mundo</div>
-          </div>
-        </div>
-      </section>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+rel="stylesheet">
 
-      {/* PRODUCTS */}
-      <section id="products" className="relative z-10 py-36 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-8 text-xs tracking-[0.2em] uppercase text-white/80">
-              <span className="w-2 h-2 rounded-full bg-yellow-300"></span>
-              Productos Premium
-            </div>
+<style>
 
-            <h2 className="text-5xl md:text-7xl font-black tracking-tight bg-gradient-to-b from-white to-zinc-500 text-transparent bg-clip-text">
-              Catálogo Digital
-            </h2>
-          </div>
+/* ============================================================
+RESET
+============================================================ */
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Ebooks Premium',
-                price: '$49',
-                image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1200&auto=format&fit=crop',
-                desc: 'Guías digitales modernas sobre negocios, productividad e inteligencia artificial.',
-              },
-              {
-                title: 'Plantillas Pro',
-                price: '$29',
-                image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
-                desc: 'Templates minimalistas y herramientas para creadores digitales.',
-              },
-              {
-                title: 'Recursos Creativos',
-                price: '$79',
-                image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
-                desc: 'Assets premium creados para freelancers y emprendedores modernos.',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group relative rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] backdrop-blur-2xl overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.45)] hover:-translate-y-4 hover:rotate-[0.5deg] transition-all duration-700"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
-
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
-
-                <div className="p-8 relative z-10">
-                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-
-                  <p className="text-zinc-300 leading-relaxed mb-8">
-                    {item.desc}
-                  </p>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-3xl font-bold text-yellow-300">{item.price}</div>
-
-                    <button className="px-5 py-3 rounded-full border border-yellow-300/20 bg-yellow-300/10 text-yellow-200 hover:bg-yellow-300/20 hover:-translate-y-1 transition-all duration-300">
-                      Comprar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section id="about" className="relative z-10 py-36 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-8 text-xs tracking-[0.2em] uppercase text-white/80">
-              <span className="w-2 h-2 rounded-full bg-yellow-300"></span>
-              Quiénes Somos
-            </div>
-
-            <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight mb-8 bg-gradient-to-b from-white to-zinc-500 text-transparent bg-clip-text">
-              Mucho más que una tienda digital.
-            </h2>
-
-            <div className="space-y-6 text-zinc-300 text-lg leading-relaxed">
-              <p>
-                Nexora Studio es una plataforma creada para personas que buscan aprender,
-                crear y potenciar su vida digital con contenido moderno y de alto valor.
-              </p>
-
-              <p>
-                Reunimos ebooks, herramientas, plantillas y recursos premium diseñados para
-                la nueva generación de creadores y emprendedores.
-              </p>
-
-              <p className="text-yellow-200 font-medium">
-                El futuro pertenece a quienes crean, aprenden y evolucionan.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute inset-0 bg-yellow-300/10 blur-3xl rounded-full"></div>
-
-            <div className="relative rounded-[2.5rem] overflow-hidden border border-yellow-300/20 shadow-[0_40px_120px_rgba(0,0,0,0.55)]">
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
-                alt="Nexora"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section id="reviews" className="relative z-10 py-36 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tight bg-gradient-to-b from-white to-zinc-500 text-transparent bg-clip-text mb-6">
-              Lo que dicen nuestros clientes
-            </h2>
-
-            <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-              Recursos digitales diseñados para ayudar a la nueva generación digital.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              'La calidad visual y el contenido superaron totalmente mis expectativas.',
-              'Nexora tiene una estética premium increíble y productos realmente útiles.',
-              'Una de las mejores experiencias digitales que encontré este año.',
-            ].map((review, index) => (
-              <div
-                key={index}
-                className="rounded-[2rem] border border-white/10 bg-white/[0.04] backdrop-blur-2xl p-8 shadow-[0_20px_80px_rgba(0,0,0,0.45)]"
-              >
-                <div className="flex gap-1 text-yellow-300 mb-6">
-                  ★★★★★
-                </div>
-
-                <p className="text-zinc-300 leading-relaxed mb-8">
-                  “{review}”
-                </p>
-
-                <div>
-                  <div className="font-semibold">Cliente Premium</div>
-                  <div className="text-zinc-500 text-sm">Nexora Shop</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section id="contact" className="relative z-10 px-6 pb-32">
-        <div className="max-w-6xl mx-auto rounded-[3rem] overflow-hidden border border-yellow-300/20 bg-gradient-to-br from-yellow-300/10 to-white/[0.03] backdrop-blur-2xl p-16 md:p-24 text-center shadow-[0_40px_120px_rgba(0,0,0,0.55)] relative">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-300/10 blur-3xl rounded-full"></div>
-
-          <div className="relative z-10">
-            <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight bg-gradient-to-b from-white to-zinc-500 text-transparent bg-clip-text mb-8">
-              Diseñado para quienes quieren construir su futuro digital.
-            </h2>
-
-            <p className="max-w-3xl mx-auto text-zinc-300 text-lg md:text-xl leading-relaxed mb-12">
-              Descubrí herramientas, contenido y recursos premium creados para la nueva generación digital.
-            </p>
-
-            <button className="px-10 py-5 rounded-full bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-600 text-black font-bold text-lg shadow-[0_20px_60px_rgba(250,204,21,0.35)] hover:scale-105 hover:-translate-y-1 transition-all duration-500">
-              Comenzar Ahora →
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="relative z-10 border-t border-white/10 py-12 px-6 text-center text-zinc-500 text-sm">
-        <div className="text-xl tracking-[0.3em] font-bold text-white mb-6">
-          NEXORA <span className="text-yellow-300">SHOP</span>
-        </div>
-
-        <div className="flex flex-wrap items-center justify-center gap-8 mb-6">
-          <a href="#products" className="hover:text-yellow-300 transition">Productos</a>
-          <a href="#about" className="hover:text-yellow-300 transition">Nosotros</a>
-          <a href="#reviews" className="hover:text-yellow-300 transition">Reviews</a>
-          <a href="#contact" className="hover:text-yellow-300 transition">Contacto</a>
-        </div>
-
-        <p>© 2026 Nexora Shop — Todos los derechos reservados.</p>
-      </footer>
-    </div>
-  )
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  background:#070707;
+
+  color:#fff;
+
+  font-family:'Inter',sans-serif;
+
+  overflow-x:hidden;
+
+  position:relative;
+}
+
+/* ============================================================
+ROOT COLORS
+============================================================ */
+
+:root{
+
+  --gold:#FFD95A;
+  --gold-light:#FFF2A8;
+  --gold-dark:#C79818;
+
+  --bg:#070707;
+  --card:#121212;
+
+  --white:#ffffff;
+  --soft:#cfcfcf;
+}
+
+/* ============================================================
+BACKGROUND
+============================================================ */
+
+body::before{
+
+  content:'';
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+
+    radial-gradient(circle at 20% 20%, rgba(255,217,90,.14), transparent 22%),
+
+    radial-gradient(circle at 80% 70%, rgba(255,217,90,.08), transparent 26%),
+
+    linear-gradient(
+      180deg,
+      #20170d 0%,
+      #0f0f0f 40%,
+      #070707 100%
+    );
+
+  z-index:-2;
+}
+
+/* ============================================================
+PARTICLES
+============================================================ */
+
+.particles{
+
+  position:fixed;
+
+  inset:0;
+
+  overflow:hidden;
+
+  pointer-events:none;
+
+  z-index:-1;
+}
+
+.particle{
+
+  position:absolute;
+
+  width:3px;
+  height:3px;
+
+  border-radius:50%;
+
+  background:rgba(255,217,90,.4);
+
+  animation:float linear infinite;
+}
+
+@keyframes float{
+
+  from{
+    transform:translateY(100vh);
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  to{
+    transform:translateY(-120vh);
+    opacity:0;
+  }
+}
+
+/* ============================================================
+LOADER
+============================================================ */
+
+.loader{
+
+  position:fixed;
+
+  inset:0;
+
+  background:#070707;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:999999;
+
+  animation:fadeLoader 1s ease forwards;
+
+  animation-delay:2.5s;
+}
+
+.loader-logo{
+
+  font-family:'Space Grotesk',sans-serif;
+
+  font-size:40px;
+
+  letter-spacing:.28em;
+
+  animation:pulse 1.5s infinite;
+}
+
+.loader-logo span{
+  color:var(--gold);
+}
+
+@keyframes pulse{
+
+  0%{
+    opacity:.4;
+    transform:scale(.96);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  100%{
+    opacity:.4;
+    transform:scale(.96);
+  }
+}
+
+@keyframes fadeLoader{
+
+  to{
+    opacity:0;
+    visibility:hidden;
+  }
+}
+
+/* ============================================================
+NAVBAR
+============================================================ */
+
+.nav{
+
+  position:fixed;
+
+  top:0;
+
+  width:100%;
+
+  z-index:999;
+
+  backdrop-filter:blur(18px);
+
+  background:rgba(10,10,10,.55);
+
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.nav-inner{
+
+  max-width:1300px;
+
+  margin:auto;
+
+  padding:18px 28px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+
+  font-family:'Space Grotesk',sans-serif;
+
+  font-size:20px;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+.nav-links{
+
+  display:flex;
+
+  gap:34px;
+}
+
+.nav-links a{
+
+  color:#f0f0f0;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--gold);
+}
+
+.menu-btn{
+
+  display:none;
+
+  font-size:28px;
+
+  cursor:pointer;
+}
+
+@media(max-width:820px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+}
+
+/* ============================================================
+HERO
+============================================================ */
+
+.hero{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:180px 24px 120px;
+
+  position:relative;
+}
+
+.hero-content{
+
+  max-width:1100px;
+}
+
+.eyebrow{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:12px 20px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.04);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  margin-bottom:34px;
+
+  font-size:12px;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.dot{
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:var(--gold);
+
+  box-shadow:0 0 20px var(--gold);
+}
+
+.hero h1{
+
+  font-family:'Space Grotesk',sans-serif;
+
+  font-size:clamp(68px,12vw,170px);
+
+  line-height:.92;
+
+  letter-spacing:-.06em;
+
+  margin-bottom:30px;
+
+  background:linear-gradient(
+    180deg,
+    #fff,
+    #cfcfcf
+  );
+
+  -webkit-background-clip:text;
+
+  color:transparent;
+}
+
+.hero h1 span{
+
+  background:linear-gradient(
+    135deg,
+    #FFF2A8,
+    #FFD95A,
+    #C79818
+  );
+
+  -webkit-background-clip:text;
+
+  color:transparent;
+}
+
+.sub{
+
+  max-width:760px;
+
+  margin:auto auto 48px;
+
+  font-size:clamp(18px,2vw,24px);
+
+  line-height:1.8;
+
+  color:#d9d9d9;
+
+  font-weight:300;
+}
+
+.hero-buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+/* ============================================================
+BUTTONS
+============================================================ */
+
+.btn{
+
+  padding:16px 34px;
+
+  border-radius:999px;
+
+  border:none;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  font-size:15px;
+
+  transition:.4s;
+}
+
+.btn-primary{
+
+  background:linear-gradient(
+    135deg,
+    #FFF2A8,
+    #FFD95A,
+    #C79818
+  );
+
+  color:#111;
+
+  box-shadow:
+    0 20px 60px rgba(255,217,90,.35);
+}
+
+.btn-primary:hover{
+
+  transform:
+    translateY(-5px)
+    scale(1.03);
+}
+
+.btn-secondary{
+
+  background:rgba(255,255,255,.06);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  color:#fff;
+}
+
+.btn-secondary:hover{
+
+  border-color:rgba(255,217,90,.4);
+}
+
+/* ============================================================
+SECTION
+============================================================ */
+
+section{
+
+  max-width:1300px;
+
+  margin:auto;
+
+  padding:140px 28px;
+}
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:80px;
+}
+
+.section-title h2{
+
+  font-size:clamp(40px,6vw,70px);
+
+  margin-bottom:20px;
+}
+
+.section-title p{
+
+  color:#cfcfcf;
+
+  max-width:700px;
+
+  margin:auto;
+
+  line-height:1.8;
+}
+
+/* ============================================================
+TRUST BAR
+============================================================ */
+
+.trust{
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:20px;
+}
+
+.trust-card{
+
+  padding:30px;
+
+  border-radius:28px;
+
+  background:rgba(255,255,255,.04);
+
+  border:1px solid rgba(255,255,255,.06);
+
+  text-align:center;
+
+  backdrop-filter:blur(12px);
+}
+
+.trust-card h3{
+
+  color:var(--gold);
+
+  font-size:40px;
+
+  margin-bottom:10px;
+}
+
+@media(max-width:900px){
+
+  .trust{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .trust{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ============================================================
+PRODUCTS
+============================================================ */
+
+.products{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:30px;
+}
+
+@media(max-width:1000px){
+
+  .products{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:700px){
+
+  .products{
+    grid-template-columns:1fr;
+  }
+}
+
+.card{
+
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.03)
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:34px;
+
+  overflow:hidden;
+
+  transition:.5s;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
+  backdrop-filter:blur(18px);
+}
+
+.card:hover{
+
+  transform:
+    translateY(-12px)
+    scale(1.02);
+
+  border-color:rgba(255,217,90,.3);
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,.55),
+    0 0 40px rgba(255,217,90,.1);
+}
+
+.card img{
+
+  width:100%;
+
+  height:270px;
+
+  object-fit:cover;
+}
+
+.card-content{
+
+  padding:28px;
+}
+
+.card h3{
+
+  font-size:26px;
+
+  margin-bottom:14px;
+}
+
+.card p{
+
+  color:#d7d7d7;
+
+  line-height:1.8;
+
+  margin-bottom:26px;
+}
+
+.price-row{
+
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+}
+
+.price{
+
+  font-size:32px;
+
+  color:var(--gold);
+
+  font-weight:700;
+}
+
+/* ============================================================
+TESTIMONIALS
+============================================================ */
+
+.testimonials{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:28px;
+}
+
+@media(max-width:900px){
+
+  .testimonials{
+    grid-template-columns:1fr;
+  }
+}
+
+.testimonial{
+
+  padding:34px;
+
+  border-radius:30px;
+
+  background:rgba(255,255,255,.04);
+
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.testimonial p{
+
+  color:#ddd;
+
+  line-height:1.9;
+
+  margin-bottom:24px;
+}
+
+.user{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+}
+
+.avatar{
+
+  width:50px;
+  height:50px;
+
+  border-radius:50%;
+
+  background:linear-gradient(
+    135deg,
+    #FFD95A,
+    #C79818
+  );
+}
+
+/* ============================================================
+CTA
+============================================================ */
+
+.cta{
+
+  text-align:center;
+
+  padding:120px 28px;
+
+  border-radius:42px;
+
+  background:linear-gradient(
+    135deg,
+    rgba(255,217,90,.12),
+    rgba(255,255,255,.03)
+  );
+
+  border:1px solid rgba(255,217,90,.18);
+}
+
+.cta h2{
+
+  font-size:clamp(42px,6vw,80px);
+
+  margin-bottom:20px;
+}
+
+.cta p{
+
+  max-width:700px;
+
+  margin:auto auto 40px;
+
+  line-height:1.8;
+
+  color:#ddd;
+}
+
+/* ============================================================
+FOOTER
+============================================================ */
+
+footer{
+
+  padding:70px 24px;
+
+  text-align:center;
+
+  border-top:1px solid rgba(255,255,255,.06);
+
+  color:#a9a9a9;
+}
+
+.footer-links{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:24px;
+
+  flex-wrap:wrap;
+
+  margin:24px 0;
+}
+
+.footer-links a{
+
+  color:#d9d9d9;
+
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:var(--gold);
+}
+
+/* ============================================================
+SCROLL REVEAL
+============================================================ */
+
+.hidden{
+
+  opacity:0;
+
+  transform:translateY(60px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.show{
+
+  opacity:1;
+
+  transform:translateY(0);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div class="loader">
+
+  <div class="loader-logo">
+
+    NEXORA <span>SHOP</span>
+
+  </div>
+
+</div>
+
+<!-- PARTICLES -->
+
+<div class="particles"></div>
+
+<!-- NAV -->
+
+<nav class="nav">
+
+  <div class="nav-inner">
+
+    <div class="logo">
+      NEXORA <span>SHOP</span>
+    </div>
+
+    <div class="nav-links">
+
+      <a href="#products">Productos</a>
+
+      <a href="#testimonials">Reviews</a>
+
+      <a href="#about">Nosotros</a>
+
+      <a href="#contact">Contacto</a>
+
+    </div>
+
+    <div class="menu-btn">☰</div>
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content hidden">
+
+    <div class="eyebrow">
+
+      <span class="dot"></span>
+
+      Plataforma Digital Premium
+
+    </div>
+
+    <h1>
+
+      NEXORA <span>SHOP</span>
+
+    </h1>
+
+    <p class="sub">
+
+      Recursos digitales premium diseñados para emprendedores,
+      creadores y mentes modernas que buscan evolucionar en la nueva era digital.
+
+    </p>
+
+    <div class="hero-buttons">
+
+      <button class="btn btn-primary"
+      onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+
+        Explorar Productos →
+
+      </button>
+
+      <button class="btn btn-secondary"
+      onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+
+        Conocer Más
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TRUST -->
+
+<section class="hidden">
+
+  <div class="trust">
+
+    <div class="trust-card">
+
+      <h3>10K+</h3>
+
+      <p>Clientes digitales</p>
+
+    </div>
+
+    <div class="trust-card">
+
+      <h3>24/7</h3>
+
+      <p>Acceso instantáneo</p>
+
+    </div>
+
+    <div class="trust-card">
+
+      <h3>Premium</h3>
+
+      <p>Experiencia moderna</p>
+
+    </div>
+
+    <div class="trust-card">
+
+      <h3>∞</h3>
+
+      <p>Ideas y creatividad</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products" class="hidden">
+
+  <div class="section-title">
+
+    <h2>Productos Premium</h2>
+
+    <p>
+
+      Descubrí herramientas, ebooks y recursos digitales
+      diseñados para potenciar tu creatividad y productividad.
+
+    </p>
+
+  </div>
+
+  <div class="products">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop" />
+
+      <div class="card-content">
+
+        <h3>Ebooks Premium</h3>
+
+        <p>
+
+          Guías digitales modernas sobre inteligencia artificial,
+          negocios y productividad avanzada.
+
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">$49</div>
+
+          <button class="btn btn-primary">
+            Comprar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1400&auto=format&fit=crop" />
+
+      <div class="card-content">
+
+        <h3>Plantillas Pro</h3>
+
+        <p>
+
+          Templates modernas para contenido,
+          productividad y diseño digital.
+
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">$29</div>
+
+          <button class="btn btn-primary">
+            Comprar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1400&auto=format&fit=crop" />
+
+      <div class="card-content">
+
+        <h3>Recursos Creativos</h3>
+
+        <p>
+
+          Assets premium diseñados para creadores,
+          freelancers y emprendedores digitales.
+
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">$79</div>
+
+          <button class="btn btn-primary">
+            Comprar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials" class="hidden">
+
+  <div class="section-title">
+
+    <h2>Lo que dicen nuestros clientes</h2>
+
+  </div>
+
+  <div class="testimonials">
+
+    <div class="testimonial">
+
+      <p>
+
+        “La calidad visual y el contenido de Nexora
+        están a otro nivel. Todo se siente premium.”
+
+      </p>
+
+      <div class="user">
+
+        <div class="avatar"></div>
+
+        <div>
+
+          <strong>Martina R.</strong><br>
+          Diseñadora Digital
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+
+        “Los ebooks me ayudaron muchísimo a organizar
+        mi negocio digital y mejorar mi productividad.”
+
+      </p>
+
+      <div class="user">
+
+        <div class="avatar"></div>
+
+        <div>
+
+          <strong>Lucas M.</strong><br>
+          Emprendedor
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+
+        “La estética y experiencia parecen de una startup internacional.”
+
+      </p>
+
+      <div class="user">
+
+        <div class="avatar"></div>
+
+        <div>
+
+          <strong>Sofía G.</strong><br>
+          Content Creator
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="hidden">
+
+  <div class="section-title">
+
+    <h2>Mucho más que una tienda digital.</h2>
+
+    <p>
+
+      Nexora Studio nace con la visión de crear una experiencia moderna,
+      elegante y cinematográfica para la nueva generación digital.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section id="contact" class="hidden">
+
+  <div class="cta">
+
+    <h2>
+
+      El futuro digital comienza ahora.
+
+    </h2>
+
+    <p>
+
+      Descubrí recursos premium diseñados para ayudarte
+      a crear, aprender y evolucionar.
+
+    </p>
+
+    <button class="btn btn-primary">
+
+      Explorar Nexora →
+
+    </button>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="logo">
+
+    NEXORA <span>SHOP</span>
+
+  </div>
+
+  <div class="footer-links">
+
+    <a href="#products">Productos</a>
+
+    <a href="#about">Nosotros</a>
+
+    <a href="#testimonials">Reviews</a>
+
+    <a href="#contact">Contacto</a>
+
+  </div>
+
+  <div>
+
+    © 2026 Nexora Studio — Todos los derechos reservados.
+
+  </div>
+
+</footer>
+
+<script>
+
+/* ============================================================
+PARTICLES
+============================================================ */
+
+const particles = document.querySelector('.particles');
+
+for(let i=0;i<45;i++){
+
+  const p = document.createElement('span');
+
+  p.classList.add('particle');
+
+  p.style.left = Math.random()*100 + '%';
+
+  p.style.animationDuration =
+    (10 + Math.random()*15) + 's';
+
+  p.style.animationDelay =
+    Math.random()*10 + 's';
+
+  particles.appendChild(p);
+}
+
+/* ============================================================
+SCROLL REVEAL
+============================================================ */
+
+const hiddenElements =
+document.querySelectorAll('.hidden');
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add('show');
+    }
+
+  });
+
+},{
+  threshold:.15
+});
+
+hiddenElements.forEach(el=>{
+
+  observer.observe(el);
+
+});
+
+</script>
+
+</body>
+
+</html>
